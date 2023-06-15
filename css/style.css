@@ -161,6 +161,11 @@ box-shadow: 2px 5px 15px 5px rgba(0,0,0,0.24);
     margin-top: 5em;
 
 }
+
+.grid-root{
+    position: relative;
+}
+
 .title-h1{
     font-weight: bolder;
     font-size: 1.35em;
@@ -175,10 +180,45 @@ box-shadow: 2px 5px 15px 5px rgba(0,0,0,0.24);
     margin:2em 0em;
     display: flex;
     gap:1vw;
+    overflow-x: auto;
+    scroll-behavior: smooth;
 }
 
+.grid::-webkit-scrollbar {
+    display: none;
+  }
+  
+.pre-btn,
+.nxt-btn {
+  border: solid 1px black;
+  width: 3rem;
+  height: 3rem;
+  border-radius: 2em;
+  position: absolute;
+  margin-top: 30vh;
+  top: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  z-index: 8;
+}
+
+.pre-btn {
+  left: -1vw;
+}
+
+.nxt-btn {
+  right: -1vw;
+}
+
+.pre-btn:hover,.nxt-btn:hover{
+    background-color: black;
+    color: white;
+}
 .grad-grid-item{
-    width:24vw;
+    flex: 0 0 auto;
+    width:24%;
     height: 20vw;
     background-image: linear-gradient(to bottom,  rgba(0, 0, 0, 0), rgba(0, 0, 0, 0), rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.9));
     position: relative;
@@ -212,7 +252,8 @@ box-shadow: 2px 5px 15px 5px rgba(0,0,0,0.24);
 }
 
 .rating-grid-item{
-    width: 22vw;
+    flex: 0 0 auto;
+    width: 24%;
     height: 75vh;
     overflow: hidden;
 }

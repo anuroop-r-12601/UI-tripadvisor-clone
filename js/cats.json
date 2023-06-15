@@ -12,6 +12,9 @@
         },{
             "text":"Luxury",
             "imgPath":"Categories/item4.jpg"
+        },{
+            "text":"Out of the Ordinary",
+            "imgPath":"Categories/item5.jpg"
         }
     ]
 }

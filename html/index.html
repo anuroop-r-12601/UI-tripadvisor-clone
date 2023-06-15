@@ -9,8 +9,7 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
-    <script src="../js/script.js"></script> 
+    
   </head>
   <body>
     <div class="container">
@@ -99,33 +98,73 @@
           <button class="hotel-img-btn">See the list</p>
         </div>
 
-        <div class="categories">
+        <div class="categories grid-root">
           <p class="title-h1">Explore top hotels by category</p>
           <p class="subtitle-h2">From fam-friendly to next-level luxe and more</p>
+          <button class="pre-btn">
+            <span class="material-icons-outlined">
+              arrow_back
+            </span>
+          </button>
+          <button class="nxt-btn">
+            <span class="material-icons-outlined">
+              arrow_forward
+            </span>  
+          </button>
           <div class="categories-grid grid">
               <!-- Fetched from JSON -->
           </div>
         </div>
         
-        <div class="tour">
+        <div class="tour grid-root">
           <p class="title-h1">Ways to tour Bengaluru</p>
           <p class="subtitle-h2">Book these experiences for a close-up look at Bengaluru.</p>
+          <button class="pre-btn">
+            <span class="material-icons-outlined">
+              arrow_back
+            </span>
+          </button>
+          <button class="nxt-btn">
+            <span class="material-icons-outlined">
+              arrow_forward
+            </span>  
+          </button>
           <div class="tour-grid grid">
             <!-- Fetched from JSON -->
           </div>
         </div>
 
-        <div class="getaways">
+        <div class="getaways grid-root">
           <p class="title-h1">Weekend getaways from Bengaluru</p>
           <p class="subtitle-h2">Explore what’s nearby</p>
+          <button class="pre-btn">
+            <span class="material-icons-outlined">
+              arrow_back
+            </span>
+          </button>
+          <button class="nxt-btn">
+            <span class="material-icons-outlined">
+              arrow_forward
+            </span>  
+          </button>
           <div class="getaways-grid grid">
               <!-- Fetched from JSON -->
           </div>
         </div>
 
-        <div class="destinations">
+        <div class="destinations grid-root">
           <p class="title-h1">Top destinations for your next holiday</p>
           <p class="subtitle-h2">Here's where your fellow travellers are headed</p>
+          <button class="pre-btn">
+            <span class="material-icons-outlined">
+              arrow_back
+            </span>
+          </button>
+          <button class="nxt-btn">
+            <span class="material-icons-outlined">
+              arrow_forward
+            </span>  
+          </button>
           <div class="destinations-grid grid">
               <!-- Fetched from JSON -->
           </div>
@@ -135,4 +174,6 @@
         </div>
     </div>
   </body>
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  <script src="../js/script.js"></script> 
 </html>

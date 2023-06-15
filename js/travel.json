@@ -27,6 +27,46 @@
             "rating": 5,
             "reviews": 13,
             "cost": "2,500"
+        },{
+            "text":"Bengaluru Pete City Market Half-Day Walking Tour",
+            "imgPath":"Travel/caption5.jpg",
+            "rating": 5,
+            "reviews": 67,
+            "cost": "4,938"
+        },
+        {
+            "text":"Full Day Private tour of Mysore from Bangalore with pick up and drop-off",
+            "imgPath":"Travel/caption6.jpg",
+            "rating": 4.5,
+            "reviews": 11,
+            "cost": "9,931"
+        },
+        {
+            "text":"Heritage Tour of Mysore,Srirangapatana & Somanathpur with Breakfast &",
+            "imgPath":"Travel/caption7.jpg",
+            "rating": 5,
+            "reviews": 155,
+            "cost": "15,442"
+        },
+        {
+            "text":"See Bangalore through my eyes (Cultural / Historical / Walking Tour)",
+            "imgPath":"Travel/caption8.jpg",
+            "rating": 5,
+            "reviews": 45,
+            "cost": "3,535"
+        },{
+            "text":"Private tour of Hampi from Bangalore over 2 days with a guide & including hotel",
+            "imgPath":"Travel/caption9.jpg",
+            "rating": 5,
+            "reviews": 2,
+            "cost": "28,279"
+        },
+        {
+            "text":"Royal Mysore tour from Bangalore in private car with guide and lunch",
+            "imgPath":"Travel/caption10.jpg",
+            "rating": 5,
+            "reviews": 75,
+            "cost": "11,362"
         }
     ]
 }

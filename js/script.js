@@ -62,7 +62,7 @@ function getUsers(){
     }
     changeDiv.innerHTML=changeHtml;
     const userItems = document.querySelectorAll('.user-grid-item');
-console.log(userItems)
+// console.log(userItems)
 userItems.forEach(user => {
     user.addEventListener('click', () => {
         const id = user.getAttribute('data-id');
@@ -74,3 +74,23 @@ userItems.forEach(user => {
 
 getUsers();
 
+
+const carousel = [...document.querySelectorAll('.grid')];
+const nxtBtn = [...document.querySelectorAll('.nxt-btn')];
+const preBtn = [...document.querySelectorAll('.pre-btn')];
+
+console.log(carousel)
+
+carousel.forEach((item, i) => {
+    let containerDimensions = item.getBoundingClientRect();
+    let containerWidth = containerDimensions.width;
+    console.log(containerDimensions,containerWidth)
+
+    nxtBtn[i].addEventListener('click', () => {
+        item.scrollLeft += containerWidth;
+    })
+
+    preBtn[i].addEventListener('click', () => {
+        item.scrollLeft -= containerWidth;
+    })
+})

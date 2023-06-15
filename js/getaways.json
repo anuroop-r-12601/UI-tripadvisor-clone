@@ -12,6 +12,24 @@
         },{
             "text":"Mysuru, India",
             "imgPath":"Getaways/sri-chamundeshwari-temple.jpg"
+        },{
+            "text":"Chennai,India",
+            "imgPath":"Getaways/chennai-madras.jpg"
+        },{
+            "text":"Madikeri, India",
+            "imgPath":"Getaways/closeup-view.jpg"
+        },{
+            "text":"Gokarna, India",
+            "imgPath":"Getaways/om-beach.jpg"
+        },{
+            "text":"Pondicherry, India",
+            "imgPath":"Getaways/boating.jpg"
+        },{
+            "text":"Yercaud, India",
+            "imgPath":"Getaways/32-km-loop-road.jpg"
+        },{
+            "text":"Mahabalipuram, India",
+            "imgPath":"Getaways/bahia-de-bengala.jpg"
         }
     ]
 }
