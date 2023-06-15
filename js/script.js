@@ -2,7 +2,7 @@ function addGradItems(jsonFile, className){
 fetch(`../js/${jsonFile}`).then(async (resp) => {
     const gridList = await resp.json();
     let changeDiv=document.getElementsByClassName(className)[0];
-    let changeHtml="";
+    let changeHtml=``;
     // console.log(gridList.data)
     for(let item of gridList.data){
         changeHtml+=   `<div class="grad-grid-item">
