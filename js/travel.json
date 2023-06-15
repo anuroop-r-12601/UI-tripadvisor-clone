@@ -1,0 +1,32 @@
+{
+    "data":[
+        {
+            "text":"Bangalore Through the Ages - Full-Day Tour with Lunch",
+            "imgPath":"Travel/caption1.jpg",
+            "rating": 5,
+            "reviews": 202,
+            "cost": "9,902"
+        },
+        {
+            "text":"Bengaluru by Tuk Tuk",
+            "imgPath":"Travel/caption2.jpg",
+            "rating": 5,
+            "reviews": 44,
+            "cost": "7,989"
+        },
+        {
+            "text":"Private Full-Day Bangalore City Tour",
+            "imgPath":"Travel/caption3.jpg",
+            "rating": 4.5,
+            "reviews": 36,
+            "cost": "7,089"
+        },
+        {
+            "text":"Tipu Palace + Koté Vishnu + Fort + KR Market + Jain Temple = Bengaluru Pété Walk",
+            "imgPath":"Travel/caption4.jpg",
+            "rating": 5,
+            "reviews": 13,
+            "cost": "2,500"
+        }
+    ]
+}
