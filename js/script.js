@@ -69,11 +69,23 @@ userItems.forEach(user => {
         window.open(`user.html?id=${id}`)
     });
 });
+  }).catch((err)=>{
+    console.log("Inside catch")
   });
 }
 
-getUsers();
+const loadEle = async () => {
+    let load=document.getElementsByClassName("loading")[0];
+    console.log("beforeload");
+    const responseload= await getUsers();
+    setTimeout(()=>{
+        console.log("afterload");
+        load.style.display="none";
+    },2000); //manual delay
+    
+}
 
+loadEle();
 
 const carousel = [...document.querySelectorAll('.grid')];
 const nxtBtn = [...document.querySelectorAll('.nxt-btn')];

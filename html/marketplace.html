@@ -1,0 +1,197 @@
+<head>
+<script>
+
+"use strict";
+let marketplace = {
+  marketplaceName: 'My Marketplace',
+  address: {
+    street: '456 Market St',
+    city: 'San Francisco',
+    state: 'CA',
+    zipCode: '94101'
+  },
+  categories: [
+    {
+      categoryId: 'C1',
+      name: 'Electronics',
+      subcategories: [
+        {
+          subcategoryId: 'SC1',
+          name: 'Computers',
+          products: [
+            {
+              productId: 'P1',
+              name: 'Laptop',
+              brand: 'Brand 1',
+              price: 999.99,
+              specifications: {
+                display: '15.6 inches',
+                processor: 'Intel Core i7',
+                memory: '16GB RAM',
+                storage: '512GB SSD'
+              },
+              reviews: [
+                {
+                  userId: 'U1',
+                  username: 'User 1',
+                  rating: 4,
+                  comment: 'Great laptop!'
+                },
+                {
+                  userId: 'U2',
+                  username: 'User 2',
+                  rating: 5,
+                  comment: 'Excellent performance.'
+                }
+              ]
+            },
+            {
+              productId: 'P2',
+              name: 'Desktop',
+              brand: 'Brand 2',
+              price: 1499.99,
+              specifications: {
+                display: '24 inches',
+                processor: 'Intel Core i9',
+                memory: '32GB RAM',
+                storage: '1TB SSD'
+              },
+              reviews: [
+                {
+                  userId: 'U3',
+                  username: 'User 3',
+                  rating: 4.5,
+                  comment: 'Powerful machine!'
+                },
+                {
+                  userId: 'U1',
+                  username: 'User 1',
+                  rating: 5,
+                  comment: 'Amazing desktop.'
+                }
+              ]
+            }
+          ]
+        },
+        {
+          subcategoryId: 'SC2',
+          name: 'Mobile Phones',
+          products: [
+            {
+              productId: 'P3',
+              name: 'Smartphone',
+              brand: 'Brand 3',
+              price: 699.99,
+              specifications: {
+                display: '6.5 inches',
+                processor: 'Snapdragon 888',
+                memory: '8GB RAM',
+                storage: '128GB'
+              },
+              reviews: [
+                {
+                  userId: 'U4',
+                  username: 'User 4',
+                  rating: 4.5,
+                  comment: 'Great phone with an excellent camera.'
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      categoryId: 'C2',
+      name: 'Clothing',
+      subcategories: [
+        {
+          subcategoryId: 'SC3',
+          name: 'Men',
+          products: [
+            {
+              productId: 'P4',
+              name: 'Shirt',
+              brand: 'Brand 4',
+              price: 29.99,
+              specifications: {
+                fabric: 'Cotton',
+                size: 'Large',
+                color: 'Blue'
+              },
+              reviews: []
+            }
+          ]
+        },
+        {
+          subcategoryId: 'SC4',
+          name: 'Women',
+          products: []
+        }
+      ]
+    }
+  ]
+};
+
+marketplace=null;
+
+// base level destructure
+const {marketplaceName='defaultName',address=[],categories=[]} =marketplace ?? {} 
+console.log(marketplaceName,address,categories)
+
+//nested destructure
+const {address:{street='defStreet',city='defCity'}={}} = marketplace??{}
+console.log(street,city)
+
+//nested destructure with rename
+const {address:{zipCode:pinCode='576111'}={}} = marketplace??{}
+console.log(pinCode)
+
+// nested with array destructuring
+const {categories:[{subcategories:sub1='sub1'}={},{subcategories:sub2='sub2'}={}]=[]} = marketplace ?? {}
+console.log(sub1,sub2)
+
+// nested with array destructuring with rest
+const {categories:[{subcategories:subcat1='sub1'}={},...restCats]=[]} = marketplace ?? {}
+console.log(subcat1,restCats)
+
+//multilevel rest handling
+
+// nested with array destructuring with rest
+const {categories:[{subcategories:[{subcategoryId:id='1'}={},...restSubCat]=[]}={},...restCat]=[]} = marketplace ?? {}
+console.log(id,restSubCat)
+
+//nested with for loop
+let subCatList=[],prodList=[];
+const catList=categories.map(cat=> {
+const {categoryId:catId,subcategories} = cat;
+subCatList=[...subCatList,...subcategories.map(subcat=>{
+  const {subcategoryId:subId,products} = subcat;
+  prodList=[...prodList,...products.map(prod=>{
+    const {productId:prodId} = prod;
+    return prodId;
+  })]
+  return subId;
+})]
+
+return catId;
+})
+
+
+console.log(catList)
+console.log(subCatList)
+console.log(prodList)
+
+
+
+///HOISTING
+a=5;
+b=5;
+
+
+console.log(a,b,c)
+var a;
+var b;
+var c=5;
+</script>
+</head>
